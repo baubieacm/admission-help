@@ -79,5 +79,7 @@ function handleButtonClick(targetId) {
     button.style.borderRadius = '100px';
     button.disabled = true;
 
+    window.location.hash = targetId;
+
 }
 
