@@ -79,7 +79,28 @@ function handleButtonClick(targetId) {
     button.style.borderRadius = '100px';
     button.disabled = true;
 
+    updateProgressBars();
+
     window.location.hash = targetId;
+
+}
+
+
+
+
+function updateProgressBars() {
+    const progressContainer = document.querySelector('.progress');
+    const progressBars = progressContainer.querySelectorAll('.progress-bar');
+    const newWidth = 17;  
+    const newProgressBar = document.createElement('div');
+    newProgressBar.classList.add('progress-bar', 'bg-success');
+    newProgressBar.setAttribute('role', 'progressbar');
+    newProgressBar.style.width = newWidth + '%';
+    newProgressBar.setAttribute('aria-valuenow', newWidth);
+    newProgressBar.setAttribute('aria-valuemin', '0');
+    newProgressBar.setAttribute('aria-valuemax', '100');
+    progressContainer.appendChild(newProgressBar);
+
 
 }
 
