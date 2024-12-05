@@ -65,6 +65,18 @@ buttonss.forEach(function (button) {
         button.classList.add('active');
     });
 });
+let p=0;
+function importantnotice() {
+    if(p%2==0){
+   document.getElementById('notice').style.display = 'block';     
+    }
+    else{
+        document.getElementById('notice').style.display = 'none';    
+    }
+    
+    p++;
+   
+}
 
 
 function handleButtonClick(targetId) {
