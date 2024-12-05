@@ -65,3 +65,10 @@ buttonss.forEach(function(button) {
         button.classList.add('active');
     });
 });
+
+
+function handleButtonClick(targetId) {
+    document.getElementById(targetId).style.display = 'block';
+    document.getElementById('nextStepButton'+targetId).innerHTML = 'Done';
+}
+

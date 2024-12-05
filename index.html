@@ -35,12 +35,12 @@
       </div>
     </div>
 
-
+    
     <div class="row">
       <div class="col-lg-12">
         <div class="card card-margin" style="border-radius: 0px;background-color: #cce5ff;">
           <div class="widget-49-title-wrapper" style="background-color: #FF5722;padding: 0px;">
-
+          
             <div class="widget-49-meeting-info" style="padding: 8px;color:white;font-weight: 500;">
               <span class="widget-49-pro-title"> গুরুত্বপূর্ণ তথ্য </span>
             </div>
@@ -67,8 +67,9 @@
                 </li>
               </ul>
 
-
+            
             </div>
+            
             <div class="widget-49">
               <b>ভর্তির সময় যা যা নিয়ে আসতে হবেঃ</b><br>
               <ul class="widget-49-meeting-points" style="font-weight: 500;">
@@ -124,7 +125,7 @@
 
 
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-4" id="step1">
         <div class="card card-margin">
           <div class="card-body pt-3">
             <div class="widget-49">
@@ -139,8 +140,7 @@
               </div>
 
               <div class="container widget-49-meeting-points">
-                <b>বাঁধন</b> থেকে ফ্রি ব্লাড গ্রুপিং করা হবে। ছাত্র-ছাত্রীরা ব্লাড গ্রুপিং-এর রিপোর্ট সঙ্গে আনলে আর
-                ব্লাড গ্রুপিং করতে হবে না।
+                <b>বাঁধন</b> থেকে ফ্রি ব্লাড গ্রুপিং করা হবে। 
               </div>
               <div class="container">
                 <img
@@ -150,18 +150,21 @@
               <div class="container widget-49-meeting-points" style="color:#4e73e5;">
                 *ব্লাড গ্রুপিং এর রিপোর্ট নিতে হবে সেখান থেকে।
               </div>
-              <div class="widget-49-meeting-action pt-3">
-                <button type="button" class="btn btn-primary btn-sm" style="border: 0px;"
+              <div class=" container widget-49-meeting-action pt-3">
+                <button type="button" class="btn btn-primary btn-sm" style="border: 0px;background-color:#4e73e5;"
                   onclick="getDirections(24.724110912052943, 90.43821559285557)"><svg xmlns="http://www.w3.org/2000/svg"
                     width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                   </svg> দিকনির্দেশ</button>
+                  <button id="nextStepButtonstep2" class="btn btn-primary btn-sm" style="border: 0px;background-color:#4e73e5;" type="button" onclick="handleButtonClick('step2')">
+                    পরবর্তী ধাপ >
+                  </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4" id="step2" style="display: none;">
         <div class="card card-margin">
           <div class="card-body pt-3">
             <div class="widget-49">
@@ -187,18 +190,21 @@
               <div class="container widget-49-meeting-points" style="color:#D91656;">
                 *মেডিক্যাল ফরম এ চীফ মেডিক্যাল মহোদয়ের স্বাক্ষর গ্রহণ
               </div>
-              <div class="widget-49-meeting-action pt-3">
+              <div class="container widget-49-meeting-action pt-3">
                 <button type="button" class="btn btn-primary btn-sm" style="background-color:#D91656;border: 0px;"
                   onclick="getDirections(24.724140621468372, 90.43871388279825)"><svg xmlns="http://www.w3.org/2000/svg"
                     width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                   </svg> দিকনির্দেশ</button>
+                  <button id="nextStepButtonstep3" class="btn btn-primary btn-sm" style="border: 0px;background-color:#D91656;" type="button" onclick="handleButtonClick('step3')">
+                    পরবর্তী ধাপ >
+                  </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4" id="step3" style="display:none;">
         <div class="card card-margin">
           <div class="card-body pt-3">
             <div class="widget-49">
@@ -240,19 +246,22 @@
               <div class="container widget-49-meeting-points" style="color:#FF6F3C;">
                 *ডিন এবং পরিচালক মহোদয় মূল কাগজপত্র যাচাই করে ভর্তি ফরমে স্বাক্ষর প্রদান করবেন।
               </div>
-              <div class="widget-49-meeting-action pt-3">
+              <div class="container widget-49-meeting-action pt-3">
                 <button type="button" class="btn btn-primary btn-sm" style="background-color:#FF6F3C;border: 0px;"
                   onclick="getDirectionsFromActiveButton()"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                     height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                   </svg> দিকনির্দেশ</button>
+                  <button id="nextStepButtonstep4" class="btn btn-primary btn-sm" style="border: 0px;background-color:#FF6F3C;" type="button" onclick="handleButtonClick('step4')">
+                    পরবর্তী ধাপ >
+                  </button>
               </div>
 
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4" id="step4" style="display:none;">
         <div class="card card-margin">
           <div class="card-body pt-3">
             <div class="widget-49">
@@ -277,18 +286,21 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM6VboQe2pQaQEFBpIHoiKgFjzQEcgJGa9TQ&s"
                   class="img-fluid" alt="Responsive image">
               </div>
-              <div class="widget-49-meeting-action pt-3">
+              <div class=" container widget-49-meeting-action pt-3">
                 <button type="button" class="btn btn-primary btn-sm" style="background-color:#A9C52F;border: 0px;"
                   onclick="getDirections(24.722849252325293, 90.43850786176051)"><svg xmlns="http://www.w3.org/2000/svg"
                     width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                   </svg> দিকনির্দেশ</button>
+                  <button id="nextStepButtonstep5" class="btn btn-primary btn-sm" style="border: 0px;background-color:#A9C52F;" type="button" onclick="handleButtonClick('step5')">
+                    পরবর্তী ধাপ >
+                  </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4" id="step5" style="display:none;">
         <div class="card card-margin">
           <div class="card-body pt-3">
             <div class="widget-49">
@@ -313,18 +325,21 @@
               <div class="container widget-49-meeting-points" style="color:#17d1bd;">
                 *<b>কোষাধ্যক্ষ কার্যালয়ঃ</b> ডাউনলোডকৃত পে-স্লিপ গ্রহণ করে অর্ধেক অংশ ফেরত দিবেন।
               </div>
-              <div class="widget-49-meeting-action pt-3">
+              <div class="container widget-49-meeting-action pt-3">
                 <button type="button" class="btn btn-primary btn-sm" style="background-color:#17d1bd;border: 0px;"
                   onclick="getDirections(24.724341307994614, 90.43904958499945)"><svg xmlns="http://www.w3.org/2000/svg"
                     width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                   </svg> দিকনির্দেশ</button>
+                  <button id="nextStepButtonstep6" class="btn btn-primary btn-sm" style="border: 0px;background-color:#17d1bd;" type="button" onclick="handleButtonClick('step6')">
+                    পরবর্তী ধাপ >
+                  </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4" id="step6" style="display:none;">
         <div class="card card-margin">
           <div class="card-body pt-3">
             <div class="widget-49">
@@ -352,12 +367,15 @@
             
               </ul>
               
-              <div class="widget-49-meeting-action pt-3">
+              <div class="container widget-49-meeting-action pt-3">
                 <button type="button" class="btn btn-primary btn-sm" style="background-color:#7C00FE;border: 0px;"
                   onclick="getDirections(24.724341307994614, 90.43904958499945)"><svg xmlns="http://www.w3.org/2000/svg"
                     width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                   </svg> দিকনির্দেশ</button>
+                  <button id="nextStepButtonstep6" class="btn btn-primary btn-sm" style="border: 0px;background-color:#7C00FE;" type="button" onclick="handleButtonClick('step2')">
+                    পরবর্তী ধাপ >
+                  </button>
               </div>
             </div>
           </div>
@@ -389,6 +407,8 @@
 
     </div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
 </body>
 
 </html>
